@@ -11,6 +11,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const productAdminRoutes = require('./routes/productAdminRoutes');
 const adminOrderRoutes = require('./routes/adminOrderRoutes');
 const invoiceRoutes = require('./routes/invoiceRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 const app = express();
 app.use(cors());
@@ -25,6 +26,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/admin/products', productAdminRoutes);
 app.use('/api/admin/orders', adminOrderRoutes);
 app.use('/api/invoices', invoiceRoutes);
+app.use('/api/categories', categoryRoutes);
 
 // Middleware de manejo de errores
 app.use(errorHandler);
